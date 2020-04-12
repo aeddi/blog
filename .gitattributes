@@ -1,0 +1,14 @@
+static/android-chrome-192x192.png !text !filter !merge !diff
+static/android-chrome-512x512.png !text !filter !merge !diff
+static/apple-touch-icon.png !text !filter !merge !diff
+static/browserconfig.xml !text !filter !merge !diff
+static/favicon-16x16.png !text !filter !merge !diff
+static/favicon-32x32.png !text !filter !merge !diff
+static/favicon.ico !text !filter !merge !diff
+static/mstile-144x144.png !text !filter !merge !diff
+static/mstile-150x150.png !text !filter !merge !diff
+static/mstile-310x150.png !text !filter !merge !diff
+static/mstile-310x310.png !text !filter !merge !diff
+static/mstile-70x70.png !text !filter !merge !diff
+static/safari-pinned-tab.svg !text !filter !merge !diff
+static/site.webmanifest !text !filter !merge !diff
