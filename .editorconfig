@@ -14,8 +14,11 @@ trim_trailing_whitespace = true
 
 # markdown files
 [*.md]
-insert_final_newline = false
 trim_trailing_whitespace = false
+
+# json/yaml
+[*.{js,json,yml,yaml}]
+indent_size = 2
 
 # configuration files
 [*.toml]
@@ -24,3 +27,12 @@ indent_size = 2
 # web files
 [*.{html,css,scss,js}]
 indent_size = 2
+
+# ignored files
+[{*-LICENSE,{resources/_gen,public}/**}]
+charset = none
+end_of_line = none
+insert_final_newline = none
+trim_trailing_whitespace = none
+indent_style = none
+indent_size = none
