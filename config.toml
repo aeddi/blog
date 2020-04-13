@@ -1,0 +1,68 @@
+baseURL = "https://blog.aeddi.tech"
+title = "aeddi's blog"
+copyright = "This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License."
+
+languageCode = "en-us"
+defaultContentLanguage = "en"
+theme = "hermit"
+
+pygmentsCodefences  = true
+pygmentsUseClasses  = true
+rssLimit = 10  # Maximum number of items in the RSS feed.
+enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/functions/emojify/
+
+[author]
+  name = "Antoine Eddi"
+
+[taxonomies]
+  tag = "tags"
+
+[params]
+  dateform        = "Jan 2, 2006"
+  dateformShort   = "Jan 2"
+  dateformNum     = "2006-01-02"
+  dateformNumTime = "2006-01-02 15:04 -0700"
+
+  description = "aeddi's personal page and blog"
+  footerCopyright = ' &#183; Licenced under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CreativeCommons 4.0</a>'
+
+  themeColor = "#494f5c"
+  justifyContent = false  # Set "text-align: justify" to `.content`.
+  relatedPosts = false  # Add a related content section to all single posts page
+  code_copy_button = true # Turn on/off the code-copy-button for code-fields
+
+  [[params.social]]
+    name = "github"
+    url = "https://github.aeddi.tech"
+
+  [[params.social]]
+    name = "linkedin"
+    url = "https://linkedin.aeddi.tech"
+
+  [[params.social]]
+    name = "twitter"
+    url = "https://twitter.aeddi.tech"
+
+  [[params.social]]
+    name = "keybase"
+    url = "https://keybase.aeddi.tech"
+
+  [[params.social]]
+    name = "email"
+    url = ""
+
+[menu]
+  [[menu.main]]
+    name = "Posts"
+    url = "posts/"
+    weight = 10
+
+  [[menu.main]]
+    name = "Bookmarks"
+    url = "bookmarks"
+    weight = 20
+
+  [[menu.main]]
+    name = "About"
+    url = "about-me"
+    weight = 30
