@@ -1,0 +1,68 @@
+---
+name: Test
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  lint_editorconfig:
+    name: Lint EditorConfig
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout changes
+        uses: actions/checkout@v2
+
+      - name: Lint EditorConfig
+        uses: snow-actions/eclint@v1.0.1
+        with:
+          args: 'check'
+
+  lint_markdown:
+    name: Lint Markdown
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout changes
+        uses: actions/checkout@v2
+
+      - name: Lint Markdown
+        uses: nosborn/github-action-markdown-cli@v1.1.1
+        with:
+          files: .
+
+  lint_yaml:
+    name: Lint Yaml
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout changes
+        uses: actions/checkout@v2
+
+      - name: Lint Yaml
+        uses: ibiqlik/action-yamllint@master
+        with:
+          strict: true
+          config_data: |
+            extends: default
+            rules:
+              truthy:
+                allowed-values: ['true', 'false', 'on']
+
+  check_no_gif:
+    name: Check if no gif
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout changes
+        uses: actions/checkout@v2
+
+      - name: Search for gif
+        run:
+          FOUND=$(find . -name '*.gif');
+          if [ ! -z "$FOUND" ]; then
+            echo "::error ::Gif files found that need to be converted to mp4:";
+            echo "$FOUND";
+            false;
+          fi
